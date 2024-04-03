@@ -1,0 +1,1143 @@
+@import url(https://db.onlinewebfonts.com/c/64be2156f3ac444ddb84393b4605bb38?family=William+Display+Pro+Reg);
+
+@font-face {
+  font-family: "Object Sans";
+  src: url(../fonts/ObjectSans-Regular.woff2);
+}
+
+body {
+  color: #333333;
+  font-family: "Object Sans";
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1340px;
+  padding-inline: 10px;
+}
+
+.container-m {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 940px;
+  padding-inline: 10px;
+}
+
+.header {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  padding: 60px;
+  font-family: "Object Sans";
+  font-size: 14px;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__catalog-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.header__catalog {
+  color: #333333;
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+  transition: color 0.2s ease-in;
+}
+
+.header__catalog:hover {
+  color: #ba967d;
+}
+
+.header__logo-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__burger {
+  position: relative;
+  width: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.header__burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  border-radius: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.header__burger.open :nth-child(2) {
+  transform: scale(0);
+}
+
+.header__burger.open span:first-child {
+  transform: translateY(7px) rotate(135deg);
+}
+
+.header__burger.open span:last-child {
+  transform: translateY(-7px) rotate(-135deg);
+}
+
+.hero__body {
+  padding-top: 245px;
+  display: flex;
+  gap: 160px;
+}
+
+.hero__social {
+  position: relative;
+  left: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 156px;
+}
+
+.hero__social-list {
+  transform: rotate(180deg);
+  display: flex;
+  writing-mode: vertical-lr;
+  gap: 53px;
+}
+
+.hero__lang {
+  display: block;
+}
+
+.hero__wrapper {
+  display: flex;
+}
+
+.hero__left {
+  max-width: 480px;
+}
+
+.hero__title-wrapper {
+  position: relative;
+  margin-bottom: 19px;
+}
+
+.hero__title-black {
+  position: relative;
+  z-index: 30;
+  overflow: hidden;
+  font-family: "William Display Pro Reg";
+  font-size: 110px;
+  line-height: 110%;
+}
+
+.hero__title-border {
+  z-index: 100;
+  top: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  display: block;
+  position: absolute;
+  font-family: "William Display Pro Reg";
+  font-size: 110px;
+  line-height: 110%;
+}
+
+.hero__image {
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.hero__text {
+  position: relative;
+  z-index: 30;
+  max-width: 380px;
+  margin-bottom: 45px;
+}
+
+.hero__link-wrapper {
+  position: relative;
+  z-index: 100;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: auto;
+  letter-spacing: 10%;
+}
+
+.hero__link-wrapper:hover {
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+
+.hero__link-wrapper span {
+  content: "";
+  width: 120px;
+  height: 2px;
+  border-radius: 10px;
+  background-color: #ba967d;
+}
+
+.hero__bg {
+  z-index: 20;
+  top: 16vh;
+  left: 30vw;
+  position: absolute;
+}
+
+.client__header {
+  position: relative;
+  margin-block: 200px;
+}
+
+.client__header blockquote {
+  font-family: "William Display Pro Reg";
+  font-size: 60px;
+  line-height: 130%;
+  max-width: 898px;
+}
+
+.client__quote {
+  position: absolute;
+  top: -31px;
+  left: -58px;
+}
+
+.client__body {
+  display: flex;
+  margin-bottom: 290px;
+}
+
+.client__text {
+  font-size: 16px;
+  line-height: 160%;
+  width: 460px;
+  color: #333333;
+}
+
+.client__text-wrapper {
+  margin-left: 100px;
+}
+
+.client__text-body {
+  margin-top: 30px;
+}
+
+.client__cap {
+  margin-top: 50px;
+  color: #8b9594;
+}
+
+.client__title {
+  position: relative;
+  z-index: 100;
+  top: -5px;
+  right: 140px;
+  margin-top: 20px;
+  font-family: "William Display Pro Reg";
+  font-size: 48px;
+  line-height: 130%;
+}
+
+.client__link-wrapper {
+  margin-top: 112px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #333333;
+  font-size: 14px;
+  letter-spacing: 10%;
+  line-height: auto;
+  text-transform: uppercase;
+}
+
+.client__link-wrapper span {
+  position: relative;
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: #ba967d;
+}
+
+.client__image {
+  position: relative;
+  z-index: 50;
+}
+
+.client__image-wrapper {
+  position: relative;
+}
+
+.client__background {
+  width: 360px;
+  height: 600px;
+  background-color: #eeebeb;
+  border-radius: 10px;
+  position: absolute;
+  top: 22px;
+  right: -52px;
+}
+
+.client__letter {
+  position: absolute;
+  top: -30px;
+  right: 229px;
+  z-index: 100;
+}
+
+.truth__header {
+  position: absolute;
+  z-index: 50;
+}
+
+.truth__image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.truth__image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.45);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.truth__bg {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-repeat: no-repeat;
+  width: 90.2777777778vw;
+}
+
+.truth__cap {
+  display: block;
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 19px;
+}
+
+.truth__title {
+  font-family: "William Display Pro Reg";
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 130%;
+  margin-bottom: 56px;
+}
+
+.truth__top-text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 160%;
+  opacity: 0.8;
+  margin-bottom: 246px;
+}
+
+.truth__body {
+  position: relative;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 360px 439px;
+  gap: 121px;
+}
+
+.truth__body::after {
+  content: url("../images/letter-d.png");
+  display: block;
+  position: absolute;
+  left: -138px;
+  top: -161px;
+}
+
+.truth__left {
+  margin-top: 101px;
+}
+
+.truth__left-image {
+  border-radius: 10px;
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+.truth__right {
+  margin-top: -88px;
+}
+
+.truth__right-bottom-image,
+.truth__right-top-image {
+  border-radius: 10px;
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+.truth__right-top-image {
+  display: block;
+  margin: 0 auto 68px;
+}
+
+.truth__subtitle {
+  margin-top: 40px;
+  font-family: "William Display Pro Reg";
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.truth__bottom-text {
+  color: #666666;
+  margin-top: 28px;
+}
+
+.new__body {
+  padding-block: 200px 212px;
+  position: relative;
+}
+
+.new__body::after {
+  content: url("../images/letter-f.png");
+  display: block;
+  position: absolute;
+  left: -115px;
+  top: 60px;
+}
+
+.new__top {
+  margin-bottom: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new__title {
+  font-family: "William Display Pro Reg";
+  font-size: 48px;
+  line-height: 130%;
+}
+
+.new__scroller {
+  display: flex;
+  gap: 40px;
+}
+
+.new__button:hover {
+  color: #ba967d;
+}
+
+.new__list {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.new__item {
+  transition: all 0.2s ease-in-out;
+}
+
+.new__item:hover {
+  transform: translateY(-0.3472222222vw);
+}
+
+.new__item-image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.new__item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 170px;
+  padding: 17px 24px 31px 20px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.new__item-title {
+  max-width: 231px;
+  font-family: "William Display Pro Reg";
+  font-size: 24px;
+  line-height: auto;
+  margin-bottom: 4px;
+}
+
+.new__item-cap {
+  font-size: 14px;
+  line-height: 140%;
+  opacity: 0.5;
+}
+
+.new__item-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new__basket-button:hover {
+  transform: scale(1.2);
+}
+
+.material {
+  position: relative;
+}
+
+.material__body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 117px;
+}
+
+.material__body::after {
+  content: url("../images/letter-m.png");
+  display: block;
+  position: absolute;
+  left: -133px;
+  top: -145px;
+}
+
+.material__bg {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 50;
+  position: absolute;
+  top: 180px;
+  right: 0;
+  width: 66.6666666667vw;
+  height: 41.6666666667vw;
+}
+
+.material__cap {
+  color: #8b9594;
+  font-size: 18px;
+  line-height: 20px;
+  display: block;
+  margin-bottom: 19px;
+}
+
+.material__title {
+  z-index: 100;
+  position: relative;
+  font-size: 48px;
+  line-height: 130%;
+  margin-bottom: 67px;
+}
+
+.material__text {
+  z-index: 100;
+  position: relative;
+  max-width: 439px;
+}
+
+.material__image {
+  border-radius: 10px;
+  z-index: 100;
+  position: relative;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.giza__body {
+  margin-top: 26.3888888889vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.giza__left,
+.giza__right {
+  max-width: 440px;
+}
+
+.giza__left {
+  position: relative;
+}
+
+.giza__title {
+  font-family: "William Display Pro Reg";
+  font-size: 48px;
+  line-height: 130%;
+  margin-bottom: 46px;
+}
+
+.giza__image {
+  position: relative;
+  z-index: 100;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.giza__background {
+  z-index: 50;
+  position: absolute;
+  bottom: -41px;
+  left: 40px;
+  width: 360px;
+  height: 560px;
+  border-radius: 10px;
+  background-color: #eeebeb;
+}
+
+.giza__text {
+  margin-top: 27px;
+  opacity: 0.8;
+}
+
+.giza__list {
+  margin-top: 57px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 43px;
+}
+
+.giza__item {
+  max-width: 202px;
+}
+
+.giza__item-number {
+  font-size: 36px;
+  line-height: 40px;
+  color: #ba967d;
+  margin-bottom: 10px;
+}
+
+.giza__item-title {
+  font-family: "William Display Pro Reg";
+  font-size: 24px;
+  line-height: auto;
+  margin-bottom: 15px;
+}
+
+.giza__item-text {
+  opacity: 0.8;
+  max-width: 189px;
+}
+
+.quote__body {
+  margin-top: 13.8888888889vw;
+  position: relative;
+}
+
+.quote__body::before {
+  content: url("../images/quote-top.png");
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.quote__body::after {
+  content: url("../images/quote-bottom.svg");
+  display: block;
+  position: absolute;
+  height: 158px;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.quote__image-wrapper {
+  position: relative;
+}
+
+.quote__image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.65);
+}
+
+.quote__content {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.quote__bg {
+  width: 100%;
+  height: 45.1388888889vw;
+}
+
+.quote__text {
+  color: #ffffff;
+  font-family: "William Display Pro Reg";
+  font-size: 60px;
+  line-height: 130%;
+  max-width: 920px;
+}
+
+.quote__author {
+  color: #ffffff;
+  font-family: "William Display Pro Reg";
+  font-style: normal;
+  font-size: 20px;
+  line-height: auto;
+}
+
+.quote__footer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quote__footer:last-child {
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 12px;
+  line-height: auto;
+}
+
+.quote__arrow-left,
+.quote__arrow-right {
+  width: 13.8888888889vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.quote__arrow-left:hover,
+.quote__arrow-right:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.quote__arrow-left {
+  justify-content: end;
+}
+
+.quote__arrow-right {
+  justify-content: start;
+}
+
+.advantages__body {
+  position: relative;
+  margin-top: 200px;
+}
+
+.advantages__body::after {
+  content: url("../images/letter-a.png");
+  display: block;
+  position: absolute;
+  left: -135px;
+  top: -195px;
+}
+
+.advantages__cap {
+  position: relative;
+  z-index: 100;
+  display: block;
+  font-size: 18px;
+  line-height: 20px;
+  color: #8b9594;
+  margin-bottom: 20px;
+}
+
+.advantages__title {
+  position: relative;
+  z-index: 100;
+  font-family: "William Display Pro Reg";
+  font-size: 48px;
+  line-height: 130%;
+  margin-bottom: 53px;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  max-width: 281px;
+}
+
+.advantages__item:first-child {
+  margin-top: 23px;
+}
+
+.advantages__item:nth-child(2) {
+  margin-top: 61px;
+}
+
+.advantages__item:first-child .advantages__item-image {
+  margin-bottom: 13px;
+}
+
+.advantages__item:nth-child(2) .advantages__item-image {
+  margin-left: -10px;
+  margin-bottom: 22px;
+}
+
+.advantages__item:last-child .advantages__item-image {
+  margin-bottom: 11px;
+}
+
+.advantages__item-title {
+  font-family: "William Display Pro Reg";
+  font-size: 24px;
+  line-height: auto;
+  margin-bottom: 20px;
+}
+
+.advantages__item-text {
+  font-size: 16px;
+  line-height: 28px;
+  color: #000000;
+  opacity: 0.8;
+}
+
+.service__body {
+  margin-top: 200px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.service__body::after {
+  content: url(../images/letter-s.png);
+  position: absolute;
+  z-index: 100;
+  left: -91px;
+  top: -127px;
+}
+
+.service__left,
+.service__right {
+  width: 440px;
+}
+
+.service__left {
+  position: relative;
+}
+
+.service__image {
+  position: relative;
+  z-index: 100;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.service__background {
+  position: absolute;
+  z-index: 50;
+  left: 79px;
+  top: 89px;
+  width: 360px;
+  height: 560px;
+  background-color: #eeebeb;
+  border-radius: 10px;
+}
+
+.service__right {
+  margin-top: 49px;
+}
+
+.service__cap {
+  margin-bottom: 20px;
+  display: block;
+  font-size: 18px;
+  line-height: 20px;
+  color: #8b9594;
+}
+
+.service__title {
+  z-index: 100;
+  position: relative;
+  right: 161px;
+  font-family: "William Display Pro Reg";
+  font-size: 48px;
+  line-height: 130%;
+  margin-bottom: 37px;
+}
+
+.service__text {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.product__body {
+  position: relative;
+  margin-top: 200px;
+}
+
+.product__body::after {
+  z-index: 50;
+  position: absolute;
+  left: -92px;
+  top: -127px;
+  content: url(../images/letter-p.png);
+}
+
+.product__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__title {
+  position: relative;
+  z-index: 100;
+  margin-bottom: 48px;
+  font-family: "William Display Pro Reg";
+  font-size: 48px;
+  line-height: 130%;
+}
+
+.product__item:nth-child(2) {
+  margin-top: 179px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(51, 51, 51, 0.3) 100%), url(../images/badsheet.png) center center no-repeat;
+  width: 280px;
+  height: 587px;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.product__item-beauty {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(51, 51, 51, 0.3) 100%), url(../images/beauty.png) center center no-repeat;
+  width: 280px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.product__item-pillowcase {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(51, 51, 51, 0.3) 100%), url(../images/pillowcase.png) center center no-repeat;
+  width: 280px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-top: 39px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.product__item-bedspreads {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(51, 51, 51, 0.3) 100%), url(../images/bedspreads.png) center center no-repeat;
+  width: 280px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.product__item-bathroom {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(51, 51, 51, 0.3) 100%), url(../images/bathroom.png) top center;
+  width: 280px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-top: 39px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.product__item-link {
+  font-family: "William Display Pro Reg";
+  font-size: 24px;
+  line-height: auto;
+  color: #ffffff;
+}
+
+.subscribe {
+  background-image: url(../images/subscribe-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.subscribe__background {
+  margin-top: 200px;
+  background-color: rgba(51, 51, 51, 0.6);
+  height: 100%;
+  padding: 4.8611111111vw 0 6.5972222222vw;
+}
+
+.subscribe__body {
+  text-align: center;
+}
+
+.subscribe__title {
+  font-family: "William Display Pro Reg";
+  font-size: 48px;
+  line-height: 130%;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.subscribe__text {
+  margin: 0 auto;
+  max-width: 318px;
+  margin-bottom: 42px;
+  color: #ffffff;
+}
+
+.subscribe input,
+.subscribe__button {
+  height: 50px;
+  border-radius: 5px;
+}
+
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe input {
+  padding-left: 19px;
+  width: 360px;
+  background-color: #ffffff;
+}
+
+.subscribe input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  color: #c4c4c4;
+}
+
+.subscribe input::placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  color: #c4c4c4;
+}
+
+.subscribe__name {
+  margin-bottom: 20px;
+}
+
+.subscribe__email {
+  margin-bottom: 30px;
+}
+
+.subscribe__button {
+  width: 360px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-inline: 115px;
+  background-color: #ba967d;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.subscribe__button:hover {
+  background-color: #eeebeb;
+  color: #ba967d;
+}
+
+.footer {
+  background: #222222;
+}
+
+.footer__body {
+  padding-block: 51px 50px;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
+.footer__logo {
+  margin-bottom: 82px;
+}
+
+.footer__title {
+  font-size: 16px;
+  line-height: auto;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-bottom: 18.24px;
+}
+
+.footer__phone {
+  display: block;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: auto;
+  margin-bottom: 14.41px;
+  transition: color 0.2s ease-in;
+}
+
+.footer__phone:hover {
+  color: #ba967d;
+}
+
+.footer__timing {
+  color: #ffffff;
+  opacity: 0.5;
+  font-size: 16px;
+  line-height: auto;
+}
+
+.footer__link {
+  font-size: 16px;
+  line-height: auto;
+  color: #ffffff;
+  transition: color 0.2s ease-in;
+}
+
+.footer__link:hover {
+  color: #ba967d;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__copyright {
+  color: #ffffff;
+  opacity: 0.5;
+  font-size: 16px;
+  line-height: auto;
+  display: flex;
+  justify-content: center;
+}
