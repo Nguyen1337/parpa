@@ -1318,7 +1318,7 @@ body {
 
   .hero__social {
     font-size: 14px;
-    left: 22px;
+    left: 20px;
     width: 40px;
     gap: 156px;
     justify-content: center;
@@ -1360,21 +1360,82 @@ body {
   .hero__link-wrapper {
     font-size: 14px;
   }
+
+  .hero__link-wrapper span {
+    width: 120px;
+    height: 2px;
+  }
 }
 
 @media (max-width: 1023px) {
+  .header {
+    padding: 30px;
+  }
+
+  .header__catalog {
+    display: none;
+  }
+
+  .header__logo {
+    color: #ffffff;
+  }
+
+  .header__tel {
+    display: none;
+  }
+
+  .header__burger {
+    margin-right: 0;
+  }
+
+  .header__burger span {
+    background-color: #ffffff;
+  }
+
   .hero {
     position: relative;
+    height: 1023px;
+    min-height: 100vh;
+    padding-bottom: 0;
   }
 
   .hero__body {
     padding-top: 0;
+    max-width: unset;
+  }
+
+  .hero__social {
+    padding-bottom: 37px;
+    justify-content: flex-end;
+    color: white;
+    z-index: 100;
+  }
+
+  .hero__social-list {
+    display: none;
   }
 
   .hero__wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
+    padding-inline: 30px;
+  }
+
+  .hero__left {
+    padding-top: 346px;
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: unset;
+  }
+
+  .hero__title-black {
+    z-index: 100;
+    color: #ffffff;
+  }
+
+  .hero__title-border {
+    display: none;
   }
 
   .hero__right {
@@ -1382,8 +1443,55 @@ body {
     top: 0;
   }
 
-  .hero__image {
-    height: 100%;
+  .hero__right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 55;
+  }
+
+  .hero__image {
+    border-radius: 0;
+    position: relative;
+  }
+
+  .hero__text {
+    z-index: 100;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 465px;
+  }
+
+  .hero__link-wrapper {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    height: unset;
+    max-height: 100vh;
+  }
+
+  .hero__left {
+    padding-top: 184px;
+  }
+
+  .hero__title-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .hero__title-black {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .hero__text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 25px;
   }
 }
