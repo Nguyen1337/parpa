@@ -1402,6 +1402,15 @@ body {
     height: 100%;
   }
 
+  .hero__title-black {
+    z-index: 100;
+    color: #ffffff;
+  }
+
+  .hero__title-border {
+    display: none;
+  }
+
   .hero__right {
     width: 100%;
     top: 0;

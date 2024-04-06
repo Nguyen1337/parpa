@@ -383,6 +383,11 @@ body {
         line-height: 100%;
       }
 
+      @include tablet {
+        z-index: 100;
+        color: $white;
+      }
+
       // max-width: 420px;
     }
 
@@ -400,6 +405,10 @@ body {
       @include desktop {
         font-size: 110px;
         line-height: 100%;
+      }
+
+      @include tablet {
+        display: none;
       }
     }
   }
