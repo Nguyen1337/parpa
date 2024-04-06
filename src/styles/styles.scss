@@ -56,6 +56,7 @@ body {
   padding: vw(60);
   font-family: $font-object;
   font-size: vw(14);
+  display: none;
 
   @include desktop {
     padding: 30px 20px;
@@ -1448,5 +1449,79 @@ body {
     line-height: auto;
     display: flex;
     justify-content: center;
+  }
+}
+
+.hero-by-rrand0m {
+  height: 100vh;
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding-left: 9%;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 110px;
+    line-height: 121px;
+  }
+}
+
+.socials {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  transform-origin: bottom;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.images-on-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  &__item {
+    width: 50%;
+    display: block;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--translated-to-right {
+      // по хорошему тут просто надо svg которая норм сделана обрезанной, тогда этот модификатор не нужен
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &>div,
+      &>svg {
+        position: absolute;
+        transform: translateX(29%);
+      }
+    }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 100%;
+
+  &--big {
+    width: 90%;
   }
 }
