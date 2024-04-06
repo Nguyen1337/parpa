@@ -1318,7 +1318,7 @@ body {
 
   .hero__social {
     font-size: 14px;
-    left: 22px;
+    left: 20px;
     width: 40px;
     gap: 156px;
     justify-content: center;
@@ -1360,15 +1360,40 @@ body {
   .hero__link-wrapper {
     font-size: 14px;
   }
+
+  .hero__link-wrapper span {
+    width: 120px;
+    height: 2px;
+  }
 }
 
 @media (max-width: 1023px) {
+  .header__catalog {
+    display: none;
+  }
+
+  .header__logo {
+    color: #ffffff;
+  }
+
+  .header__tel {
+    display: none;
+  }
+
+  .header__burger span {
+    background-color: #ffffff;
+  }
+
   .hero {
     position: relative;
+    height: 1023px;
+    min-height: 100vh;
+    padding-bottom: 0;
   }
 
   .hero__body {
     padding-top: 0;
+    max-width: unset;
   }
 
   .hero__wrapper {
@@ -1383,7 +1408,6 @@ body {
   }
 
   .hero__image {
-    height: 100%;
-    width: 100%;
+    border-radius: 0;
   }
 }
