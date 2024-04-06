@@ -19,8 +19,8 @@ body {
 .container-m {
   margin: 0 auto;
   width: 100%;
-  max-width: 940px;
-  padding-inline: 10px;
+  max-width: 65.2777777778vw;
+  padding-inline: 0.6944444444vw;
 }
 
 .header {
@@ -96,12 +96,15 @@ body {
   border-left: 1px solid #eeebeb;
   padding-inline: 1.3888888889vw;
   width: 16.6666666667vw;
-  transition: all 0.3s ease;
 }
 
 .header__column:hover:not(:first-child) {
   border-color: transparent;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+}
+
+.header__column:hover + .header__column {
+  border-left: none;
 }
 
 .header__column:last-child {
@@ -128,6 +131,10 @@ body {
   font-size: 1.6666666667vw;
   line-height: auto;
   margin-bottom: 1.8055555556vw;
+}
+
+.header__column-image {
+  width: 10.0694444444vw;
 }
 
 .header__column-list {
@@ -196,7 +203,7 @@ body {
 }
 
 .header__burger.open span:last-child {
-  transform: translateY(-7px) rotate(-135deg);
+  transform: translateY(-8px) rotate(-135deg);
 }
 
 .hero {
@@ -341,14 +348,14 @@ body {
 
 .client__header {
   position: relative;
-  margin-block: 200px;
+  margin-block: 11.6666666667vw 12.2222222222vw;
 }
 
 .client__header blockquote {
   font-family: "William Display Pro Reg";
-  font-size: 60px;
+  font-size: 4.1666666667vw;
   line-height: 130%;
-  max-width: 898px;
+  max-width: 62.3611111111vw;
 }
 
 .client__quote {
@@ -359,63 +366,66 @@ body {
 
 .client__body {
   display: flex;
-  margin-bottom: 290px;
+  margin-bottom: 20.1388888889vw;
 }
 
 .client__text {
-  font-size: 16px;
+  font-size: 1.1111111111vw;
   line-height: 160%;
-  width: 460px;
-  color: #333333;
+  width: 31.9444444444vw;
+  color: rgba(51, 51, 51, 0.8);
 }
 
 .client__text-wrapper {
-  margin-left: 100px;
+  margin-left: 6.9444444444vw;
 }
 
 .client__text-body {
-  margin-top: 30px;
+  margin-top: 2.0833333333vw;
 }
 
 .client__cap {
-  margin-top: 50px;
+  margin-top: 3.4722222222vw;
   color: #8b9594;
+  font-size: 1.1111111111vw;
 }
 
 .client__title {
   position: relative;
   z-index: 100;
-  top: -5px;
-  right: 140px;
-  margin-top: 20px;
+  top: -0.3472222222vw;
+  right: 9.7222222222vw;
+  margin-top: 1.3888888889vw;
   font-family: "William Display Pro Reg";
-  font-size: 48px;
+  font-size: 3.3333333333vw;
   line-height: 130%;
 }
 
 .client__link-wrapper {
-  margin-top: 112px;
+  margin-top: 7.7777777778vw;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1.1111111111vw;
   color: #333333;
-  font-size: 14px;
+  font-size: 0.9722222222vw;
   letter-spacing: 10%;
-  line-height: auto;
+  line-height: 26px;
   text-transform: uppercase;
 }
 
 .client__link-wrapper span {
   position: relative;
   content: "";
-  width: 120px;
-  height: 2px;
+  width: 8.3333333333vw;
+  height: 0.1388888889vw;
   background-color: #ba967d;
 }
 
 .client__image {
   position: relative;
   z-index: 50;
+  width: 25vw;
+  height: 41.6666666667vw;
 }
 
 .client__image-wrapper {
@@ -423,19 +433,19 @@ body {
 }
 
 .client__background {
-  width: 360px;
-  height: 600px;
+  width: 25vw;
+  height: 41.6666666667vw;
   background-color: #eeebeb;
   border-radius: 10px;
   position: absolute;
-  top: 22px;
-  right: -52px;
+  top: 1.5277777778vw;
+  right: -3.6111111111vw;
 }
 
 .client__letter {
   position: absolute;
-  top: -30px;
-  right: 229px;
+  top: -2.0833333333vw;
+  right: 15.9027777778vw;
   z-index: 100;
 }
 
@@ -1278,6 +1288,11 @@ body {
 }
 
 @media (max-width: 1439px) {
+  .container-m {
+    max-width: 940px;
+    padding-inline: 10px;
+  }
+
   .header {
     padding: 30px 20px;
   }
@@ -1303,6 +1318,10 @@ body {
 
   .header__burger span {
     margin: 5px 0;
+  }
+
+  .header__burger.open span:last-child {
+    transform: translateY(-7px) rotate(-135deg);
   }
 
   .hero {
@@ -1365,6 +1384,79 @@ body {
     width: 120px;
     height: 2px;
   }
+
+  .client__header {
+    margin-block: 200px 170px;
+  }
+
+  .client__header blockquote {
+    font-size: 56px;
+    line-height: 80px;
+    max-width: 898px;
+    margin: 0 auto;
+  }
+
+  .client__body {
+    margin-bottom: 290px;
+    height: 641px;
+    justify-content: space-evenly;
+  }
+
+  .client__text {
+    font-size: 16px;
+    width: 418px;
+  }
+
+  .client__text-wrapper {
+    margin-left: 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .client__text-body {
+    margin-top: 30px;
+  }
+
+  .client__cap {
+    font-size: 16px;
+    margin-top: 50px;
+  }
+
+  .client__title {
+    top: -5px;
+    right: 140px;
+    margin-top: 20px;
+    font-size: 48px;
+  }
+
+  .client__link-wrapper {
+    margin-top: 10px;
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .client__link-wrapper span {
+    width: 120px;
+    height: 2px;
+  }
+
+  .client__image {
+    width: 360px;
+    height: 600px;
+  }
+
+  .client__background {
+    width: 360px;
+    height: 600px;
+    top: 40px;
+    right: -40px;
+  }
+
+  .client__letter {
+    top: -30px;
+    right: 229px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1382,6 +1474,10 @@ body {
 
   .header__tel {
     display: none;
+  }
+
+  .header__column {
+    width: 145px;
   }
 
   .header__burger {
@@ -1468,6 +1564,74 @@ body {
   .hero__link-wrapper {
     color: #ffffff;
   }
+
+  .client__header {
+    margin-block: 150px;
+  }
+
+  .client__header blockquote {
+    font-size: 40px;
+    line-height: 50px;
+    padding-inline: 20px;
+  }
+
+  .client__quote {
+    top: -22px;
+    left: -18px;
+  }
+
+  .client__body {
+    padding-inline: 20px;
+    box-sizing: content-box;
+    margin: 0 auto 239px;
+    max-width: 708px;
+  }
+
+  .client__text {
+    width: 334px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .client__text-wrapper {
+    margin-left: 60px;
+    max-width: 320px;
+  }
+
+  .client__cap {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .client__title {
+    font-size: 40px;
+    line-height: 50px;
+    right: 88px;
+  }
+
+  .client__link-wrapper {
+    font-size: 12px;
+    line-height: 26px;
+    gap: 20px;
+  }
+
+  .client__image {
+    width: 310px;
+    height: 523px;
+  }
+
+  .client__background {
+    width: 312px;
+    height: 518px;
+    top: 30px;
+    right: -29px;
+  }
+
+  .client__letter {
+    transform: scale(0.8);
+    top: -50px;
+    left: -95px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1493,5 +1657,23 @@ body {
     font-size: 12px;
     line-height: 20px;
     margin-bottom: 25px;
+  }
+
+  .client__header {
+    margin-block: 135px 160px;
+  }
+
+  .client__header blockquote {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .client__quote {
+    transform: scale(0.5);
+    top: -43px;
+  }
+
+  .client__body {
+    margin-bottom: 111px;
   }
 }

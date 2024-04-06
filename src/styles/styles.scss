@@ -8,7 +8,7 @@
 @import "_media", "_variables";
 
 @function vw($value, $base: 1440) {
-  @return $value / $base * 100vw;
+  @return calc($value / $base * 100vw);
 }
 
 // font-family: "William Display Pro Reg";
@@ -42,8 +42,13 @@ body {
 .container-m {
   margin: 0 auto;
   width: 100%;
-  max-width: 940px;
-  padding-inline: 10px;
+  max-width: vw(940);
+  padding-inline: vw(10);
+
+  @include desktop {
+    max-width: 940px;
+    padding-inline: 10px;
+  }
 }
 
 .header {
@@ -152,11 +157,14 @@ body {
     border-left: 1px solid $light-grey;
     padding-inline: vw(20);
     width: vw(240);
-    transition: all 0.3s ease;
 
     &:hover:not(:first-child) {
       border-color: transparent;
       box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    &:hover + .header__column {
+      border-left: none;
     }
 
     &:last-child {
@@ -183,6 +191,14 @@ body {
       font-size: vw(24);
       line-height: auto;
       margin-bottom: vw(26);
+    }
+
+    &-image {
+      width: vw(145);
+    }
+
+    @include tablet {
+      width: 145px;
     }
 
     &-list {
@@ -268,7 +284,11 @@ body {
       }
 
       span:last-child {
-        transform: translateY(-7px) rotate(-135deg);
+        transform: translateY(-8px) rotate(-135deg);
+
+        @include desktop {
+          transform: translateY(-7px) rotate(-135deg);
+        }
       }
     }
   }
@@ -582,13 +602,43 @@ body {
 .client {
   &__header {
     position: relative;
-    margin-block: 200px;
+    margin-block: vw(168) vw(176);
+
+    @include desktop {
+      margin-block: 200px 170px;
+    }
+
+    @include tablet {
+      margin-block: 150px;
+    }
+
+    @include mobile {
+      margin-block: 135px 160px;
+    }
 
     & blockquote {
       font-family: $font-william;
-      font-size: 60px;
+      font-size: vw(60);
       line-height: 130%;
-      max-width: 898px;
+      max-width: vw(898);
+
+      @include desktop {
+        font-size: 56px;
+        line-height: 80px;
+        max-width: 898px;
+        margin: 0 auto;
+      }
+
+      @include tablet {
+        font-size: 40px;
+        line-height: 50px;
+        padding-inline: 20px;
+      }
+
+      @include mobile {
+        font-size: 28px;
+        line-height: 35px;
+      }
     }
   }
 
@@ -596,86 +646,220 @@ body {
     position: absolute;
     top: -31px;
     left: -58px;
+
+    @include tablet {
+      top: -22px;
+      left: -18px;
+    }
+
+    @include mobile {
+      transform: scale(0.5);
+      top: -43px;
+    }
   }
 
   &__body {
     display: flex;
-    margin-bottom: 290px;
+    margin-bottom: vw(290);
+
+    @include desktop {
+      margin-bottom: 290px;
+      height: 641px;
+      justify-content: space-evenly;
+    }
+
+    @include tablet {
+      padding-inline: 20px;
+      box-sizing: content-box;
+      margin: 0 auto 239px;
+      max-width: 708px;
+    }
+
+    @include mobile {
+      margin-bottom: 111px;
+    }
   }
 
   &__text {
-    font-size: 16px;
+    font-size: vw(16);
     line-height: 160%;
-    width: 460px;
-    color: $black;
+    width: vw(460);
+    color: rgba($color: $black, $alpha: 0.8);
+
+    @include desktop {
+      font-size: 16px;
+      width: 418px;
+    }
+
+    @include tablet {
+      width: 334px;
+      font-size: 15px;
+      line-height: 25px;
+    }
+
     &-wrapper {
-      margin-left: 100px;
+      margin-left: vw(100);
+
+      @include desktop {
+        margin-left: 29px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+      }
+
+      @include tablet {
+        margin-left: 60px;
+        max-width: 320px;
+      }
     }
 
     &-body {
-      margin-top: 30px;
+      margin-top: vw(30);
+
+      @include desktop {
+        margin-top: 30px;
+      }
     }
   }
 
   &__cap {
-    margin-top: 50px;
+    margin-top: vw(50);
     color: $dark-grey;
+    font-size: vw(16);
+
+    @include desktop {
+      font-size: 16px;
+      margin-top: 50px;
+    }
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 
   &__title {
     position: relative;
     z-index: 100;
-    top: -5px;
-    right: 140px;
-    margin-top: 20px;
+    top: vw(-5);
+    right: vw(140);
+    margin-top: vw(20);
     font-family: $font-william;
-    font-size: 48px;
+    font-size: vw(48);
     line-height: 130%;
+
+    @include desktop {
+      top: -5px;
+      right: 140px;
+      margin-top: 20px;
+      font-size: 48px;
+    }
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 50px;
+      right: 88px;
+    }
   }
 
   &__link-wrapper {
-    margin-top: 112px;
+    margin-top: vw(112);
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: vw(16);
     color: $black;
-    font-size: 14px;
+    font-size: vw(14);
     letter-spacing: 10%;
-    line-height: auto;
+    line-height: 26px;
     text-transform: uppercase;
+
+    @include desktop {
+      margin-top: 10px;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 26px;
+      gap: 20px;
+    }
 
     & span {
       position: relative;
       content: "";
-      width: 120px;
-      height: 2px;
+      width: vw(120);
+      height: vw(2);
       background-color: $rose-gold;
+
+      @include desktop {
+        width: 120px;
+        height: 2px;
+      }
     }
   }
 
   &__image {
     position: relative;
     z-index: 50;
+    width: vw(360);
+    height: vw(600);
+
+    @include desktop {
+      width: 360px;
+      height: 600px;
+    }
+
+    @include tablet {
+      width: 310px;
+      height: 523px;
+    }
+
     &-wrapper {
       position: relative;
     }
   }
 
   &__background {
-    width: 360px;
-    height: 600px;
+    width: vw(360);
+    height: vw(600);
     background-color: $light-grey;
     border-radius: 10px;
     position: absolute;
-    top: 22px;
-    right: -52px;
+    top: vw(22);
+    right: vw(-52);
+
+    @include desktop {
+      width: 360px;
+      height: 600px;
+      top: 40px;
+      right: -40px;
+    }
+
+    @include tablet {
+      width: 312px;
+      height: 518px;
+      top: 30px;
+      right: -29px;
+    }
   }
 
   &__letter {
     position: absolute;
-    top: -30px;
-    right: 229px;
+    top: vw(-30);
+    right: vw(229);
     z-index: 100;
+
+    @include desktop {
+      top: -30px;
+      right: 229px;
+    }
+
+    @include tablet {
+      transform: scale(0.8);
+      top: -50px;
+      left: -95px;
+    }
   }
 }
 

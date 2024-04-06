@@ -62,7 +62,7 @@
           <span class="header__tel">+7 495 122 22 46</span>
         </div>
 
-        <div class="header__burger">
+        <div class="header__burger" onclick="toggleCatalog()">
           <span></span><span></span><span></span>
         </div>
       </div>
@@ -1052,6 +1052,16 @@
         button.classList.toggle("open");
         menu.classList.toggle("open");
       });
+    </script>
+    <script>
+      function toggleCatalog() {
+        var catalogWrapper = document.querySelector(".header__catalog-wrapper");
+        if (catalogWrapper.style.visibility === "hidden") {
+          catalogWrapper.style.visibility = "visible";
+        } else {
+          catalogWrapper.style.visibility = "hidden";
+        }
+      }
     </script>
   </body>
 </html>
