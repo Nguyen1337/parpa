@@ -659,24 +659,35 @@ body {
   }
 
   &__body {
-    display: flex;
+    display: grid;
+    grid-template-columns: vw(360) vw(460);
+    grid-template-areas:
+      "img text1"
+      "img text2";
     margin-bottom: vw(290);
 
     @include desktop {
+      grid-template-columns: 360px 460px;
       margin-bottom: 290px;
       height: 641px;
       justify-content: space-evenly;
     }
 
     @include tablet {
+      grid-template-columns: 310px 334px;
       padding-inline: 20px;
       box-sizing: content-box;
       margin: 0 auto 239px;
-      max-width: 708px;
+      column-gap: 64px;
     }
 
     @include mobile {
+      grid-template-columns: 155px 1fr;
+      grid-template-areas:
+        "img text1"
+        "text2 text2";
       margin-bottom: 111px;
+      column-gap: 0;
     }
   }
 
@@ -697,7 +708,30 @@ body {
       line-height: 25px;
     }
 
-    &-wrapper {
+    @include mobile {
+      width: unset;
+      font-size: 14px;
+    }
+
+    &-wrapper1 {
+      grid-area: text1;
+
+      @include mobile {
+        justify-content: unset;
+        width: unset;
+      }
+
+      & .client__text {
+        margin-block: vw(30);
+      }
+    }
+
+    &-wrapper2 {
+      grid-area: text2;
+    }
+
+    &-wrapper1,
+    &-wrapper2 {
       margin-left: vw(100);
 
       @include desktop {
@@ -708,16 +742,13 @@ body {
       }
 
       @include tablet {
-        margin-left: 60px;
+        margin-left: 0;
         max-width: 320px;
       }
-    }
 
-    &-body {
-      margin-top: vw(30);
-
-      @include desktop {
-        margin-top: 30px;
+      @include mobile {
+        max-width: unset;
+        justify-content: unset;
       }
     }
   }
@@ -735,6 +766,11 @@ body {
     @include tablet {
       font-size: 18px;
       line-height: 20px;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+      font-size: 14px;
     }
   }
 
@@ -759,6 +795,11 @@ body {
       font-size: 40px;
       line-height: 50px;
       right: 88px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 35px;
     }
   }
 
@@ -815,8 +856,20 @@ body {
       height: 523px;
     }
 
+    @include mobile {
+      width: 171px;
+      height: 330px;
+      left: -62px;
+    }
+
     &-wrapper {
       position: relative;
+      grid-area: img;
+
+      @include tablet {
+        width: fit-content;
+        height: fit-content;
+      }
     }
   }
 
@@ -841,6 +894,12 @@ body {
       height: 518px;
       top: 30px;
       right: -29px;
+    }
+
+    @include mobile {
+      width: 171px;
+      height: 330px;
+      right: 38px;
     }
   }
 
@@ -867,11 +926,26 @@ body {
   &__header {
     position: absolute;
     z-index: 50;
+    width: calc(100% - vw(140));
+
+    @include desktop {
+      width: calc(100% - 47px);
+      height: 500px;
+    }
+
+    @include tablet {
+      width: calc(100% - 30px);
+    }
   }
 
   &__image-wrapper {
     position: relative;
     display: inline-block;
+    width: 100%;
+
+    @include desktop {
+      height: 500px;
+    }
 
     &::after {
       content: "";
@@ -890,7 +964,11 @@ body {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background-repeat: no-repeat;
-    width: 90.27777777777778vw;
+    width: 100%;
+
+    @include desktop {
+      height: 500px;
+    }
   }
 
   &__cap {
@@ -922,8 +1000,13 @@ body {
     position: relative;
     z-index: 100;
     display: grid;
-    grid-template-columns: 360px 439px;
-    gap: 121px;
+    grid-template-columns: vw(360) vw(439);
+    gap: vw(121);
+
+    @include desktop {
+      gap: 47px;
+      grid-template-columns: 360px 439px;
+    }
 
     &::after {
       content: url("../images/letter-d.png");
