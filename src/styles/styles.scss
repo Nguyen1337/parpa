@@ -20,11 +20,15 @@ body {
   font-family: $font-object;
   font-size: 16px;
   line-height: 160%;
-  font-variant-numeric: lining-nums !important;
-  font-feature-settings: "pnum" on, "lnum" on !important;
-  -webkit-font-feature-settings: "pnum" on, "lnum" on !important;
-  -moz-font-feature-settings: "pnum=1", "lnum=1" !important;
+  // font-variant-numeric: lining-nums !important;
+  // font-feature-settings: "pnum" on, "lnum" on !important;
+  // -webkit-font-feature-settings: "pnum" on, "lnum" on !important;
+  // -moz-font-feature-settings: "pnum=1", "lnum=1" !important;
   //   font-family: "Open Sans", sans-serif;
+}
+
+main {
+  overflow: hidden;
 }
 
 // * {
@@ -157,6 +161,7 @@ body {
     border-left: 1px solid $light-grey;
     padding-inline: vw(20);
     width: vw(240);
+    transition: all 0.3s ease-in;
 
     &:hover:not(:first-child) {
       border-color: transparent;
@@ -164,7 +169,7 @@ body {
     }
 
     &:hover + .header__column {
-      border-left: none;
+      border-left: 1px solid transparent;
     }
 
     &:last-child {
@@ -936,6 +941,10 @@ body {
     @include tablet {
       width: calc(100% - 30px);
     }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__image-wrapper {
@@ -957,6 +966,10 @@ body {
       background-color: rgba(#222222, 0.45);
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
+
+      @include mobile {
+        border-radius: 0;
+      }
     }
   }
 
@@ -969,31 +982,104 @@ body {
     @include desktop {
       height: 500px;
     }
+
+    @include mobile {
+      border-radius: 0;
+    }
   }
 
   &__cap {
     display: block;
     color: $white;
     opacity: 0.8;
-    font-size: 18px;
-    line-height: 20px;
-    margin-bottom: 19px;
+    font-size: vw(18);
+    line-height: vw(20);
+    margin-bottom: vw(19);
+
+    @include desktop {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 19px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
     font-family: $font-william;
     color: $white;
-    font-size: 48px;
+    font-size: vw(48);
     line-height: 130%;
-    margin-bottom: 56px;
+    margin-bottom: vw(56);
+
+    @include desktop {
+      font-size: 46px;
+      line-height: 70px;
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+
+    &-wrapper {
+      grid-area: title;
+      margin-top: vw(101);
+
+      @include desktop {
+        margin-top: 102px;
+      }
+
+      @include tablet {
+        margin-top: 50px;
+      }
+    }
   }
 
   &__top-text {
     color: $white;
-    font-size: 16px;
+    font-size: vw(16);
     line-height: 160%;
     opacity: 0.8;
-    margin-bottom: 246px;
+    margin-bottom: vw(246);
+    grid-area: desc;
+
+    @include desktop {
+      font-size: 16px;
+      margin-bottom: 238px;
+    }
+
+    @include tablet {
+      margin-bottom: 225px;
+    }
+
+    @include mobile {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__change {
+    grid-area: change;
+
+    @include mobile {
+      & .truth__bottom-text {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__estetic {
+    grid-area: estetic;
   }
 
   &__body {
@@ -1001,34 +1087,78 @@ body {
     z-index: 100;
     display: grid;
     grid-template-columns: vw(360) vw(439);
-    gap: vw(121);
+    grid-template-areas:
+      "title img"
+      "change desc"
+      "change estetic";
+    column-gap: vw(121);
 
     @include desktop {
-      gap: 47px;
+      column-gap: 47px;
       grid-template-columns: 360px 439px;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, 334px);
+      column-gap: 40px;
+      padding-inline: 30px;
+      justify-content: space-around;
+    }
+
+    @include mobile {
+      column-gap: 0px;
+      grid-template-columns: 1fr 115px;
+      grid-template-areas:
+        "title img"
+        "desc desc"
+        "change change"
+        "estetic estetic";
     }
 
     &::after {
       content: url("../images/letter-d.png");
       display: block;
       position: absolute;
-      left: -138px;
-      top: -161px;
+      left: vw(-138);
+      top: vw(-161);
+
+      @include desktop {
+        left: -84px;
+        top: -161px;
+      }
+
+      @include tablet {
+        left: -53px;
+        top: 36px;
+      }
     }
   }
 
   &__left {
-    margin-top: 101px;
-
     &-image {
+      width: vw(360);
+      height: vw(600);
       border-radius: 10px;
       box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.08);
+
+      @include desktop {
+        width: 360px;
+        height: 600px;
+      }
+
+      @include tablet {
+        width: 334px;
+        height: 567px;
+      }
+
+      @include mobile {
+        width: 315px;
+        height: 320px;
+      }
     }
   }
 
   &__right {
-    margin-top: -88px;
-
     &-bottom-image,
     &-top-image {
       border-radius: 10px;
@@ -1036,28 +1166,97 @@ body {
     }
 
     &-top-image {
+      width: vw(200);
+      height: vw(350);
       display: block;
-      margin: 0 auto 68px;
+      margin: vw(-88) auto 0;
+      grid-area: img;
+
+      @include desktop {
+        width: 200px;
+        height: 350px;
+        margin: -88px auto 0;
+      }
+
+      @include tablet {
+        width: 153px;
+        height: 268px;
+      }
+
+      @include mobile {
+        width: 114px;
+        height: 200px;
+        margin: -40px auto 0;
+      }
+    }
+
+    &-bottom-image {
+      width: vw(439);
+      height: vw(300);
+
+      @include desktop {
+        width: 439px;
+        height: 300px;
+      }
+
+      @include tablet {
+        width: 334px;
+        height: 228px;
+      }
+
+      @include mobile {
+        width: 315px;
+        height: 320px;
+      }
     }
   }
 
   &__subtitle {
-    margin-top: 40px;
+    margin-top: vw(40);
     font-family: $font-william;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: vw(30);
+    line-height: vw(40);
+
+    @include desktop {
+      margin-top: 40px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @include tablet {
+      line-height: 35px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 
   &__bottom-text {
     color: #666666;
-    margin-top: 28px;
+    margin-top: vw(28);
+    font-size: vw(16);
+    line-height: 160%;
+
+    @include desktop {
+      margin-top: 20px;
+      font-size: 16px;
+    }
   }
 }
 
 .new {
   &__body {
-    padding-block: 200px 212px;
+    padding-block: vw(200) vw(212);
     position: relative;
+
+    @include desktop {
+      padding-block: 200px 212px;
+    }
+
+    @include tablet {
+      padding-inline: 30px;
+    }
 
     &::after {
       content: url("../images/letter-f.png");
@@ -1065,25 +1264,79 @@ body {
       position: absolute;
       left: -115px;
       top: 60px;
+
+      @include desktop {
+        left: -71px;
+        top: 41px;
+      }
+
+      @include tablet {
+        transform: scale(0.8);
+      }
     }
   }
 
   &__top {
-    margin-bottom: 46px;
+    margin-bottom: vw(46);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include desktop {
+      margin-bottom: 38px;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 28px;
+    }
   }
 
   &__title {
     font-family: $font-william;
-    font-size: 48px;
+    font-size: vw(48);
     line-height: 130%;
+
+    @include desktop {
+      font-size: 46px;
+      line-height: 70px;
+    }
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 35px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &__scroll {
+    width: vw(60);
+    height: vw(10);
+
+    @include desktop {
+      width: 60px;
+      height: 10px;
+    }
   }
 
   &__scroller {
     display: flex;
-    gap: 40px;
+    gap: vw(40);
+
+    @include desktop {
+      gap: 40px;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__button {
@@ -1092,14 +1345,37 @@ body {
     }
   }
 
+  &__basket-button-svg {
+    width: vw(17);
+    height: vw(20);
+
+    @include desktop {
+      width: 17px;
+      height: 20px;
+    }
+  }
+
   &__list {
     display: flex;
-    gap: 40px;
-    justify-content: space-between;
+    gap: vw(40);
+    min-width: 920px;
+
+    @include desktop {
+      gap: 40px;
+    }
+
+    @include mobile {
+      gap: 20px;
+      justify-content: unset;
+    }
   }
 
   &__item {
     transition: all 0.2s ease-in-out;
+
+    @include tablet {
+      // max-width: 240px;
+    }
 
     &:hover {
       transform: translateY(vw(-5));
@@ -1108,6 +1384,20 @@ body {
     &-image {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
+      width: vw(280);
+      aspect-ratio: 1;
+
+      @include desktop {
+        width: 280px;
+      }
+
+      @include tablet {
+        width: 240px;
+      }
+
+      @include mobile {
+        width: 248px;
+      }
     }
 
     &-info {
@@ -1122,22 +1412,52 @@ body {
     }
 
     &-title {
-      max-width: 231px;
+      max-width: vw(231);
       font-family: $font-william;
-      font-size: 24px;
+      font-size: vw(24);
       line-height: auto;
-      margin-bottom: 4px;
+      margin-bottom: vw(4);
+
+      @include desktop {
+        max-width: 231px;
+        font-size: 24px;
+        margin-bottom: 4px;
+      }
+
+      @include tablet {
+        font-size: 28px;
+        line-height: 35px;
+      }
+
+      @include mobile {
+        font-size: 24px;
+        line-height: auto;
+      }
     }
 
     &-cap {
-      font-size: 14px;
+      font-size: vw(14);
       line-height: 140%;
       opacity: 0.5;
+
+      @include desktop {
+        font-size: 14px;
+      }
+
+      @include mobile {
+        line-height: 140%;
+      }
     }
 
     &-price {
       display: flex;
       justify-content: space-between;
+      font-size: vw(16);
+      line-height: 26px;
+
+      @include desktop {
+        font-size: 16px;
+      }
     }
   }
 
@@ -1153,17 +1473,67 @@ body {
 
   &__body {
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-areas:
+      "title img"
+      "text img";
     justify-content: space-between;
-    gap: 117px;
+    column-gap: vw(117);
+
+    @include desktop {
+      column-gap: 50px;
+      padding-inline: 41px;
+    }
+
+    @include tablet {
+      padding-inline: 20px;
+      column-gap: 44px;
+    }
+
+    @include mobile {
+      column-gap: 12px;
+      grid-template-areas:
+        "title img"
+        "text text";
+      grid-template-columns: 1fr 114px;
+    }
+
     &::after {
       content: url("../images/letter-m.png");
       display: block;
       position: absolute;
       left: -133px;
       top: -145px;
+
+      @include tablet {
+        transform: scale(0.7);
+        left: -120px;
+      }
+
+      @include mobile {
+        z-index: 100;
+        top: -200px;
+      }
     }
   }
+
+  &__info {
+    grid-area: title;
+    height: vw(163);
+
+    @include desktop {
+      height: 178px;
+    }
+
+    @include tablet {
+      height: 140px;
+    }
+
+    @include mobile {
+      height: 110px;
+    }
+  }
+
   &__bg {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -1173,59 +1543,157 @@ body {
     right: 0;
     width: vw(960);
     height: vw(600);
+
+    @include desktop {
+      width: calc(50% + 238px);
+      height: 600px;
+    }
+
+    @include tablet {
+      top: 0;
+      height: 660px;
+    }
+
+    @include mobile {
+      top: -40px;
+      width: 100%;
+      border-radius: 0;
+    }
   }
 
   &__cap {
+    position: relative;
+    z-index: 100;
     color: $dark-grey;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: vw(18);
+    line-height: vw(20);
     display: block;
-    margin-bottom: 19px;
+    margin-bottom: vw(19);
+
+    @include desktop {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__title {
     z-index: 100;
     position: relative;
-    font-size: 48px;
+    font-size: vw(48);
     line-height: 130%;
-    margin-bottom: 67px;
+    margin-bottom: vw(67);
+
+    @include desktop {
+      font-size: 46px;
+      line-height: 70px;
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 45px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
+    font-size: vw(16);
     z-index: 100;
     position: relative;
-    max-width: 439px;
+    line-height: 1.88;
+    max-width: vw(434);
+    color: rgba($color: $black, $alpha: 0.8);
+    grid-area: text;
+
+    @include desktop {
+      font-size: 16px;
+      max-width: 434px;
+    }
+
+    @include tablet {
+      max-width: 330px;
+    }
+
+    @include mobile {
+      max-width: unset;
+      font-size: 14px;
+    }
   }
 
   &__image {
+    width: vw(360);
+    height: vw(600);
     border-radius: 10px;
     z-index: 100;
     position: relative;
     box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+    grid-area: img;
+
+    @include desktop {
+      width: 360px;
+      height: 600px;
+    }
+
+    @include tablet {
+      width: 334px;
+      height: 585px;
+      margin-top: -80px;
+    }
+
+    @include mobile {
+      width: 114px;
+      height: 200px;
+    }
   }
 }
 
 .giza {
   &__body {
     margin-top: vw(380);
-    display: flex;
-    justify-content: space-between;
-  }
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: repeat(2, vw(440));
+    grid-template-areas:
+      "title text"
+      "img text"
+      "img items";
+    column-gap: vw(38);
 
-  &__left,
-  &__right {
-    max-width: 440px;
-  }
-
-  &__left {
-    position: relative;
+    @include desktop {
+      margin-top: 380px;
+      grid-template-columns: repeat(2, 440px);
+      column-gap: 2px;
+    }
   }
 
   &__title {
     font-family: $font-william;
-    font-size: 48px;
+    font-size: vw(48);
     line-height: 130%;
-    margin-bottom: 46px;
+    margin-bottom: vw(46);
+    grid-area: title;
+
+    @include desktop {
+      font-size: 46px;
+      line-height: 70px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image-block {
+    position: relative;
+    grid-area: img;
   }
 
   &__image {
@@ -1233,52 +1701,68 @@ body {
     z-index: 100;
     border-radius: 10px;
     box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+    width: vw(360);
+    height: vw(600);
+
+    @include desktop {
+      width: 360px;
+      height: 600px;
+    }
   }
 
   &__background {
     z-index: 50;
     position: absolute;
-    bottom: -41px;
-    left: 40px;
-    width: 360px;
-    height: 560px;
+    bottom: vw(-41);
+    left: vw(40);
     border-radius: 10px;
     background-color: $light-grey;
+    width: vw(360);
+    height: vw(560);
+
+    @include desktop {
+      width: 360px;
+      height: 560px;
+    }
   }
 
   &__text {
-    margin-top: 27px;
+    margin-top: vw(27);
     opacity: 0.8;
+    grid-area: text;
+    font-size: vw(16);
   }
 
   &__list {
-    margin-top: 57px;
+    margin-top: vw(57);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 43px;
+    row-gap: vw(43);
+    grid-area: items;
   }
 
   &__item {
-    max-width: 202px;
+    max-width: vw(202);
 
     &-number {
-      font-size: 36px;
-      line-height: 40px;
+      font-size: vw(36);
+      line-height: vw(40);
       color: $rose-gold;
-      margin-bottom: 10px;
+      margin-bottom: vw(10);
     }
 
     &-title {
       font-family: $font-william;
-      font-size: 24px;
+      font-size: vw(24);
       line-height: auto;
-      margin-bottom: 15px;
+      margin-bottom: vw(15);
     }
 
     &-text {
+      font-size: vw(16);
       opacity: 0.8;
-      max-width: 189px;
+      max-width: vw(189);
     }
   }
 }
