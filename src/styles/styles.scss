@@ -607,6 +607,7 @@ main {
 
 .client {
   &__header {
+    z-index: 100;
     position: relative;
     margin-block: vw(168) vw(176);
 
@@ -622,7 +623,34 @@ main {
       margin-block: 135px 160px;
     }
 
+    &::before {
+      content: url(../images/qoute_icon.png);
+      position: absolute;
+      width: vw(120);
+      height: vw(99);
+      left: vw(-58);
+      top: vw(-31);
+
+      @include desktop {
+        width: 120px;
+        height: 99px;
+        left: -58px;
+        top: -31px;
+      }
+
+      @include tablet {
+        left: -18px;
+      }
+
+      @include mobile {
+        top: -55px;
+        transform: scale(0.5);
+      }
+    }
+
     & blockquote {
+      position: relative;
+      z-index: 100;
       font-family: $font-william;
       font-size: vw(60);
       line-height: 130%;
@@ -648,23 +676,8 @@ main {
     }
   }
 
-  &__quote {
-    position: absolute;
-    top: -31px;
-    left: -58px;
-
-    @include tablet {
-      top: -22px;
-      left: -18px;
-    }
-
-    @include mobile {
-      transform: scale(0.5);
-      top: -43px;
-    }
-  }
-
   &__body {
+    position: relative;
     display: grid;
     grid-template-columns: vw(360) vw(460);
     grid-template-areas:
@@ -680,7 +693,7 @@ main {
     }
 
     @include tablet {
-      max-width: 768px;
+      max-width: 728px;
       grid-template-columns: 310px 334px;
       padding-inline: 20px;
       box-sizing: content-box;
@@ -689,12 +702,38 @@ main {
     }
 
     @include mobile {
-      grid-template-columns: 144px 1fr;
+      padding-inline: 0px 21px;
+      grid-template-columns: 133px 1fr;
       grid-template-areas:
         "img text1"
         "text2 text2";
-      margin-bottom: 111px;
-      column-gap: 0;
+      margin-bottom: 136px;
+      column-gap: 16px;
+    }
+
+    &::after {
+      z-index: 100;
+      content: url("../images/letter-a.png");
+      display: block;
+      position: absolute;
+      left: vw(-95);
+      top: vw(-30);
+
+      @include desktop {
+        left: -95px;
+        top: -30px;
+      }
+
+      @include tablet {
+        left: -56px;
+        top: -51px;
+        transform: scale(0.8);
+      }
+
+      @include mobile {
+        left: -126px;
+        top: -196px;
+      }
     }
   }
 
@@ -730,6 +769,14 @@ main {
 
       & .client__text {
         margin-block: vw(30);
+
+        @include tablet {
+          margin-block: 0;
+        }
+
+        @include mobile {
+          opacity: 0.5;
+        }
       }
     }
 
@@ -848,7 +895,7 @@ main {
   }
 
   &__image {
-    position: relative;
+    position: absolute;
     z-index: 50;
     width: vw(360);
     height: vw(600);
@@ -866,20 +913,17 @@ main {
     @include mobile {
       width: 171px;
       height: 330px;
-      left: -56px;
+      left: -40px;
+      top: 10px;
     }
 
     &-wrapper {
       position: relative;
       grid-area: img;
 
-      @include tablet {
-        width: fit-content;
-        height: fit-content;
-      }
-
       @include mobile {
-        position: absolute;
+        height: 330px;
+        width: 155px;
       }
     }
   }
@@ -908,27 +952,10 @@ main {
     }
 
     @include mobile {
-      width: 171px;
+      left: 0;
+      width: 133px;
       height: 330px;
       right: 38px;
-    }
-  }
-
-  &__letter {
-    position: absolute;
-    top: vw(-30);
-    right: vw(229);
-    z-index: 100;
-
-    @include desktop {
-      top: -30px;
-      right: 229px;
-    }
-
-    @include tablet {
-      transform: scale(0.8);
-      top: -50px;
-      left: -95px;
     }
   }
 }
@@ -1134,8 +1161,9 @@ main {
       }
 
       @include tablet {
-        left: -53px;
-        top: 36px;
+        left: -77px;
+        top: -156px;
+        transform: scale(0.8);
       }
     }
   }
@@ -1514,7 +1542,7 @@ main {
       top: -145px;
 
       @include tablet {
-        transform: scale(0.7);
+        transform: scale(0.8);
         left: -120px;
       }
 
@@ -2141,7 +2169,7 @@ main {
       @include tablet {
         left: -112px;
         top: -210px;
-        transform: scale(0.7);
+        transform: scale(0.8);
       }
     }
   }
@@ -2349,6 +2377,8 @@ main {
     }
 
     @include mobile {
+      display: grid;
+      grid-template-columns: 120px 1fr;
       gap: 18px;
       margin-top: 184px;
     }
@@ -2518,6 +2548,8 @@ main {
       font-size: 28px;
       line-height: 35px;
       margin-bottom: 10px;
+      margin-left: -60px;
+      right: 0;
     }
   }
 
@@ -2562,6 +2594,7 @@ main {
       content: url(../images/letter-p.png);
 
       @include tablet {
+        left: -61px;
         transform: scale(0.8);
       }
     }

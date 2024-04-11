@@ -350,28 +350,44 @@ main {
 }
 
 .client__header {
+  z-index: 100;
   position: relative;
   margin-block: 11.6666666667vw 12.2222222222vw;
 }
 
+.client__header::before {
+  content: url(../images/qoute_icon.png);
+  position: absolute;
+  width: 8.3333333333vw;
+  height: 6.875vw;
+  left: -4.0277777778vw;
+  top: -2.1527777778vw;
+}
+
 .client__header blockquote {
+  position: relative;
+  z-index: 100;
   font-family: "William Display Pro Reg";
   font-size: 4.1666666667vw;
   line-height: 130%;
   max-width: 62.3611111111vw;
 }
 
-.client__quote {
-  position: absolute;
-  top: -31px;
-  left: -58px;
-}
-
 .client__body {
+  position: relative;
   display: grid;
   grid-template-columns: 25vw 31.9444444444vw;
   grid-template-areas: "img text1" "img text2";
   margin-bottom: 20.1388888889vw;
+}
+
+.client__body::after {
+  z-index: 100;
+  content: url("../images/letter-a.png");
+  display: block;
+  position: absolute;
+  left: -6.5972222222vw;
+  top: -2.0833333333vw;
 }
 
 .client__text {
@@ -436,7 +452,7 @@ main {
 }
 
 .client__image {
-  position: relative;
+  position: absolute;
   z-index: 50;
   width: 25vw;
   height: 41.6666666667vw;
@@ -455,13 +471,6 @@ main {
   position: absolute;
   top: 1.5277777778vw;
   right: -3.6111111111vw;
-}
-
-.client__letter {
-  position: absolute;
-  top: -2.0833333333vw;
-  right: 15.9027777778vw;
-  z-index: 100;
 }
 
 .truth__header {
@@ -1518,6 +1527,13 @@ main {
     margin-block: 200px 170px;
   }
 
+  .client__header::before {
+    width: 120px;
+    height: 99px;
+    left: -58px;
+    top: -31px;
+  }
+
   .client__header blockquote {
     font-size: 56px;
     line-height: 80px;
@@ -1530,6 +1546,11 @@ main {
     margin-bottom: 290px;
     height: 641px;
     justify-content: space-evenly;
+  }
+
+  .client__body::after {
+    left: -95px;
+    top: -30px;
   }
 
   .client__text {
@@ -1578,11 +1599,6 @@ main {
     height: 600px;
     top: 40px;
     right: -40px;
-  }
-
-  .client__letter {
-    top: -30px;
-    right: 229px;
   }
 
   .truth__header {
@@ -2185,19 +2201,18 @@ main {
     margin-block: 150px;
   }
 
+  .client__header::before {
+    left: -18px;
+  }
+
   .client__header blockquote {
     font-size: 40px;
     line-height: 50px;
     padding-inline: 20px;
   }
 
-  .client__quote {
-    top: -22px;
-    left: -18px;
-  }
-
   .client__body {
-    max-width: 768px;
+    max-width: 728px;
     grid-template-columns: 310px 334px;
     padding-inline: 20px;
     box-sizing: content-box;
@@ -2206,10 +2221,20 @@ main {
     column-gap: 64px;
   }
 
+  .client__body::after {
+    left: -56px;
+    top: -51px;
+    transform: scale(0.8);
+  }
+
   .client__text {
     width: 334px;
     font-size: 15px;
     line-height: 25px;
+  }
+
+  .client__text-wrapper1 .client__text {
+    margin-block: 0;
   }
 
   .client__text-wrapper1,
@@ -2240,24 +2265,11 @@ main {
     height: 523px;
   }
 
-  .client__image-wrapper {
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-
   .client__background {
     width: 312px;
     height: 518px;
     top: 30px;
     right: -29px;
-  }
-
-  .client__letter {
-    transform: scale(0.8);
-    top: -50px;
-    left: -95px;
   }
 
   .truth__header {
@@ -2286,8 +2298,9 @@ main {
   }
 
   .truth__body::after {
-    left: -53px;
-    top: 36px;
+    left: -77px;
+    top: -156px;
+    transform: scale(0.8);
   }
 
   .truth__left-image {
@@ -2344,7 +2357,7 @@ main {
   }
 
   .material__body::after {
-    transform: scale(0.7);
+    transform: scale(0.8);
     left: -120px;
   }
 
@@ -2483,7 +2496,7 @@ main {
   .advantages__body::after {
     left: -112px;
     top: -210px;
-    transform: scale(0.7);
+    transform: scale(0.8);
   }
 
   .advantages__title {
@@ -2556,6 +2569,7 @@ main {
   }
 
   .product__body::after {
+    left: -61px;
     transform: scale(0.8);
   }
 
@@ -2691,22 +2705,28 @@ main {
     margin-block: 135px 160px;
   }
 
+  .client__header::before {
+    top: -55px;
+    transform: scale(0.5);
+  }
+
   .client__header blockquote {
     font-size: 28px;
     line-height: 35px;
   }
 
-  .client__quote {
-    transform: scale(0.5);
-    top: -43px;
+  .client__body {
+    padding-inline: 0px 21px;
+    grid-template-columns: 133px 1fr;
+    grid-template-areas: "img text1" "text2 text2";
+    margin-bottom: 136px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
   }
 
-  .client__body {
-    grid-template-columns: 144px 1fr;
-    grid-template-areas: "img text1" "text2 text2";
-    margin-bottom: 111px;
-    -moz-column-gap: 0;
-    column-gap: 0;
+  .client__body::after {
+    left: -126px;
+    top: -196px;
   }
 
   .client__text {
@@ -2717,6 +2737,10 @@ main {
   .client__text-wrapper1 {
     justify-content: unset;
     width: unset;
+  }
+
+  .client__text-wrapper1 .client__text {
+    opacity: 0.5;
   }
 
   .client__text-wrapper1,
@@ -2738,15 +2762,18 @@ main {
   .client__image {
     width: 171px;
     height: 330px;
-    left: -56px;
+    left: -40px;
+    top: 10px;
   }
 
   .client__image-wrapper {
-    position: absolute;
+    height: 330px;
+    width: 155px;
   }
 
   .client__background {
-    width: 171px;
+    left: 0;
+    width: 133px;
     height: 330px;
     right: 38px;
   }
@@ -3000,6 +3027,8 @@ main {
   }
 
   .service__body {
+    display: grid;
+    grid-template-columns: 120px 1fr;
     gap: 18px;
     margin-top: 184px;
   }
@@ -3039,6 +3068,8 @@ main {
     font-size: 28px;
     line-height: 35px;
     margin-bottom: 10px;
+    margin-left: -60px;
+    right: 0;
   }
 
   .service__text {
