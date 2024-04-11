@@ -200,11 +200,11 @@ main {
 }
 
 .header__burger.open span:first-child {
-  transform: translateY(7px) rotate(135deg);
+  transform: translateY(0.4861111111vw) rotate(135deg);
 }
 
 .header__burger.open span:last-child {
-  transform: translateY(-8px) rotate(-135deg);
+  transform: translateY(-0.4861111111vw) rotate(-135deg);
 }
 
 .hero {
@@ -324,6 +324,8 @@ main {
   font-size: 0.9722222222vw;
   line-height: auto;
   letter-spacing: 10%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .hero__link-wrapper:hover {
@@ -823,6 +825,8 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 2.9861111111vw;
+  height: -moz-fit-content;
+  height: fit-content;
   grid-area: items;
 }
 
@@ -907,30 +911,31 @@ main {
 .quote__text {
   color: #ffffff;
   font-family: "William Display Pro Reg";
-  font-size: 60px;
+  font-size: 4.1666666667vw;
   line-height: 130%;
-  max-width: 920px;
+  max-width: 63.8888888889vw;
 }
 
 .quote__author {
   color: #ffffff;
   font-family: "William Display Pro Reg";
   font-style: normal;
-  font-size: 20px;
+  font-size: 1.3888888889vw;
   line-height: auto;
 }
 
 .quote__footer {
-  margin-top: 10px;
+  margin-top: 0.6944444444vw;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.6944444444vw;
 }
 
 .quote__footer:last-child {
   color: #ffffff;
   opacity: 0.8;
-  font-size: 12px;
+  font-size: 0.8333333333vw;
+  letter-spacing: 10%;
   line-height: auto;
 }
 
@@ -959,7 +964,7 @@ main {
 
 .advantages__body {
   position: relative;
-  margin-top: 200px;
+  margin-top: 13.8888888889vw;
 }
 
 .advantages__body::after {
@@ -974,19 +979,20 @@ main {
   position: relative;
   z-index: 100;
   display: block;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.25vw;
+  line-height: 1.3888888889vw;
   color: #8b9594;
-  margin-bottom: 20px;
+  margin-bottom: 1.3888888889vw;
 }
 
 .advantages__title {
   position: relative;
   z-index: 100;
   font-family: "William Display Pro Reg";
-  font-size: 48px;
+  font-size: 3.3333333333vw;
   line-height: 130%;
-  margin-bottom: 53px;
+  margin-bottom: 3.6805555556vw;
+  max-width: 31.9444444444vw;
 }
 
 .advantages__list {
@@ -995,50 +1001,49 @@ main {
 }
 
 .advantages__item {
-  max-width: 281px;
+  max-width: 19.5138888889vw;
 }
 
 .advantages__item:first-child {
-  margin-top: 23px;
+  margin-top: 1.5972222222vw;
 }
 
 .advantages__item:nth-child(2) {
-  margin-top: 61px;
+  margin-top: 4.2361111111vw;
 }
 
 .advantages__item:first-child .advantages__item-image {
-  margin-bottom: 13px;
+  margin-bottom: 0.9027777778vw;
 }
 
 .advantages__item:nth-child(2) .advantages__item-image {
-  margin-left: -10px;
-  margin-bottom: 22px;
+  margin-left: -0.6944444444vw;
+  margin-bottom: 1.5277777778vw;
 }
 
 .advantages__item:last-child .advantages__item-image {
-  margin-bottom: 11px;
+  margin-bottom: 0.7638888889vw;
 }
 
 .advantages__item-title {
   font-family: "William Display Pro Reg";
-  font-size: 24px;
+  font-size: 1.6666666667vw;
   line-height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 1.3888888889vw;
 }
 
 .advantages__item-text {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1.1111111111vw;
+  line-height: 1.9444444444vw;
   color: #000000;
   opacity: 0.8;
 }
 
 .service__body {
-  margin-top: 200px;
+  margin-top: 13.8888888889vw;
   position: relative;
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 2.7777777778vw;
 }
 
 .service__body::after {
@@ -1051,7 +1056,8 @@ main {
 
 .service__left,
 .service__right {
-  width: 440px;
+  width: 30.5555555556vw;
+  min-width: 420px;
 }
 
 .service__left {
@@ -1063,6 +1069,8 @@ main {
   z-index: 100;
   border-radius: 10px;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+  width: 27.7083333333vw;
+  height: 42.2916666667vw;
 }
 
 .service__background {
@@ -1070,42 +1078,42 @@ main {
   z-index: 50;
   left: 79px;
   top: 89px;
-  width: 360px;
-  height: 560px;
+  width: 25vw;
+  height: 38.8888888889vw;
   background-color: #eeebeb;
   border-radius: 10px;
 }
 
 .service__right {
-  margin-top: 49px;
+  margin-top: 3.4027777778vw;
 }
 
 .service__cap {
-  margin-bottom: 20px;
+  margin-bottom: 1.3888888889vw;
   display: block;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.25vw;
+  line-height: 1.3888888889vw;
   color: #8b9594;
 }
 
 .service__title {
   z-index: 100;
   position: relative;
-  right: 161px;
+  right: 11.1805555556vw;
   font-family: "William Display Pro Reg";
-  font-size: 48px;
+  font-size: 3.3333333333vw;
   line-height: 130%;
-  margin-bottom: 37px;
+  margin-bottom: 2.5694444444vw;
 }
 
 .service__text {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1.1111111111vw;
+  line-height: 1.9444444444vw;
 }
 
 .product__body {
   position: relative;
-  margin-top: 200px;
+  margin-top: 13.8888888889vw;
 }
 
 .product__body::after {
@@ -1117,26 +1125,32 @@ main {
 }
 
 .product__list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto repeat(2, 19.4444444444vw);
+  grid-template-areas: "title title title" "beauty bedsheets bedspreads" "pillowcase bedsheets bathroom";
+  gap: 2.7777777778vw;
 }
 
 .product__title {
   position: relative;
   z-index: 100;
-  margin-bottom: 48px;
   font-family: "William Display Pro Reg";
-  font-size: 48px;
+  font-size: 3.3333333333vw;
   line-height: 130%;
+  grid-area: title;
 }
 
-.product__item:nth-child(2) {
-  margin-top: 179px;
+.product__item-bedsheets {
+  margin-top: 5vw;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, rgba(51, 51, 51, 0.3) 100%), url(../images/badsheet.png) center center no-repeat;
-  width: 280px;
-  height: 587px;
+  width: 19.4444444444vw;
+  height: 40.7638888889vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 10px;
   display: flex;
+  grid-area: bedsheets;
   align-items: end;
   padding-bottom: 20px;
   padding-left: 20px;
@@ -1145,9 +1159,8 @@ main {
 
 .product__item-beauty {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(51, 51, 51, 0.3) 100%), url(../images/beauty.png) center center no-repeat;
-  width: 280px;
-  aspect-ratio: 1;
   border-radius: 10px;
+  grid-area: beauty;
   display: flex;
   align-items: end;
   padding-bottom: 20px;
@@ -1157,23 +1170,26 @@ main {
 
 .product__item-pillowcase {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(51, 51, 51, 0.3) 100%), url(../images/pillowcase.png) center center no-repeat;
-  width: 280px;
-  aspect-ratio: 1;
   border-radius: 10px;
   display: flex;
+  grid-area: pillowcase;
   align-items: end;
   padding-bottom: 20px;
   padding-left: 20px;
-  margin-top: 39px;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
 }
 
 .product__item-bedspreads {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(51, 51, 51, 0.3) 100%), url(../images/bedspreads.png) center center no-repeat;
-  width: 280px;
-  aspect-ratio: 1;
+  margin-top: -7.4305555556vw;
+  width: 19.5138888889vw;
+  height: 19.9305555556vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 10px;
   display: flex;
+  grid-area: bedspreads;
   align-items: end;
   padding-bottom: 20px;
   padding-left: 20px;
@@ -1182,22 +1198,31 @@ main {
 
 .product__item-bathroom {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(51, 51, 51, 0.3) 100%), url(../images/bathroom.png) top center;
-  width: 280px;
-  aspect-ratio: 1;
+  margin-top: -6.875vw;
   border-radius: 10px;
   display: flex;
+  grid-area: bathroom;
   align-items: end;
   padding-bottom: 20px;
   padding-left: 20px;
-  margin-top: 39px;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
 }
 
 .product__item-link {
   font-family: "William Display Pro Reg";
-  font-size: 24px;
+  font-size: 1.6666666667vw;
   line-height: auto;
   color: #ffffff;
+}
+
+.product__item-beauty,
+.product__item-pillowcase,
+.product__item-bathroom {
+  width: 19.4444444444vw;
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .subscribe {
@@ -1208,7 +1233,7 @@ main {
 }
 
 .subscribe__background {
-  margin-top: 200px;
+  margin-top: 13.8888888889vw;
   background-color: rgba(51, 51, 51, 0.6);
   height: 100%;
   padding: 4.8611111111vw 0 6.5972222222vw;
@@ -1220,22 +1245,24 @@ main {
 
 .subscribe__title {
   font-family: "William Display Pro Reg";
-  font-size: 48px;
+  font-size: 3.3333333333vw;
   line-height: 130%;
-  margin-bottom: 30px;
+  margin-bottom: 2.0833333333vw;
   color: #ffffff;
 }
 
 .subscribe__text {
   margin: 0 auto;
-  max-width: 318px;
-  margin-bottom: 42px;
+  max-width: 22.0833333333vw;
+  margin-bottom: 2.9166666667vw;
+  font-size: 1.1111111111vw;
+  line-height: 130%;
   color: #ffffff;
 }
 
 .subscribe input,
 .subscribe__button {
-  height: 50px;
+  height: 3.4722222222vw;
   border-radius: 5px;
 }
 
@@ -1243,40 +1270,41 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-inline: 30px;
 }
 
 .subscribe input {
-  padding-left: 19px;
-  width: 360px;
+  padding-left: 1.3194444444vw;
+  width: 25vw;
   background-color: #ffffff;
 }
 
 .subscribe input::-moz-placeholder {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.9722222222vw;
+  line-height: 1.8055555556vw;
   color: #c4c4c4;
 }
 
 .subscribe input::placeholder {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.9722222222vw;
+  line-height: 1.8055555556vw;
   color: #c4c4c4;
 }
 
 .subscribe__name {
-  margin-bottom: 20px;
+  margin-bottom: 1.3888888889vw;
 }
 
 .subscribe__email {
-  margin-bottom: 30px;
+  margin-bottom: 2.0833333333vw;
 }
 
 .subscribe__button {
-  width: 360px;
-  font-size: 14px;
-  line-height: 30px;
+  width: 25vw;
+  font-size: 0.9722222222vw;
+  line-height: 2.0833333333vw;
   text-transform: uppercase;
-  padding-inline: 115px;
+  padding-inline: 7.9861111111vw;
   background-color: #ba967d;
   color: #ffffff;
   transition: all 0.2s ease-in-out;
@@ -1289,36 +1317,65 @@ main {
 
 .footer {
   background: #222222;
+  line-height: normal;
 }
 
 .footer__body {
-  padding-block: 51px 50px;
+  padding-block: 3.5416666667vw 3.4722222222vw;
 }
 
 .footer__columns {
-  display: flex;
+  display: grid;
+  grid-template-rows: 2.7777777778vw 1fr;
+  grid-template-columns: repeat(4, 14.375vw);
+  grid-template-areas: "logo catalog about more" "contacts catalog about more";
   justify-content: space-between;
-  margin-bottom: 75px;
+  margin-bottom: 5.0694444444vw;
 }
 
 .footer__logo {
-  margin-bottom: 82px;
+  width: 10.1388888889vw;
+  height: 2.7777777778vw;
+  grid-area: logo;
+}
+
+.footer__contacts {
+  grid-area: contacts;
+  margin-top: 4.8333333333vw;
+}
+
+.footer__catalog,
+.footer__about,
+.footer__more {
+  margin-top: 0.5555555556vw;
+}
+
+.footer__catalog {
+  grid-area: catalog;
+}
+
+.footer__about {
+  grid-area: about;
+}
+
+.footer__more {
+  grid-area: more;
 }
 
 .footer__title {
-  font-size: 16px;
+  font-size: 1.1111111111vw;
   line-height: auto;
   color: #ffffff;
   opacity: 0.5;
-  margin-bottom: 18.24px;
+  margin-bottom: 1.2666666667vw;
 }
 
 .footer__phone {
   display: block;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.6666666667vw;
   line-height: auto;
-  margin-bottom: 14.41px;
+  margin-bottom: 1.0006944444vw;
   transition: color 0.2s ease-in;
 }
 
@@ -1329,12 +1386,12 @@ main {
 .footer__timing {
   color: #ffffff;
   opacity: 0.5;
-  font-size: 16px;
+  font-size: 1.1111111111vw;
   line-height: auto;
 }
 
 .footer__link {
-  font-size: 16px;
+  font-size: 1.1111111111vw;
   line-height: auto;
   color: #ffffff;
   transition: color 0.2s ease-in;
@@ -1347,13 +1404,13 @@ main {
 .footer__list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.0416666667vw;
 }
 
 .footer__copyright {
   color: #ffffff;
   opacity: 0.5;
-  font-size: 16px;
+  font-size: 1.1111111111vw;
   line-height: auto;
   display: flex;
   justify-content: center;
@@ -1710,8 +1767,311 @@ main {
   }
 
   .giza__background {
+    bottom: -41px;
+    left: 40px;
     width: 360px;
     height: 560px;
+  }
+
+  .giza__text {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .giza__list {
+    row-gap: 40px;
+    margin-top: 60px;
+  }
+
+  .giza__item {
+    max-width: 202px;
+  }
+
+  .giza__item-number {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .giza__item-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .giza__item-text {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 189px;
+  }
+
+  .quote__body {
+    margin-top: 200px;
+  }
+
+  .quote__bg {
+    height: 650px;
+  }
+
+  .quote__text {
+    max-width: 920px;
+    font-size: 50px;
+    line-height: auto;
+  }
+
+  .quote__author {
+    font-size: 20px;
+  }
+
+  .quote__footer {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .quote__footer:last-child {
+    font-size: 12px;
+  }
+
+  .advantages__body {
+    margin-top: 200px;
+  }
+
+  .advantages__cap {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .advantages__title {
+    font-size: 46px;
+    line-height: 70px;
+    margin-bottom: 37px;
+    max-width: 460px;
+  }
+
+  .advantages__item {
+    max-width: 281px;
+  }
+
+  .advantages__item:first-child {
+    margin-top: 23px;
+  }
+
+  .advantages__item:nth-child(2) {
+    margin-top: 61px;
+  }
+
+  .advantages__item:first-child .advantages__item-image {
+    margin-bottom: 13px;
+  }
+
+  .advantages__item:nth-child(2) .advantages__item-image {
+    margin-left: -10px;
+    margin-bottom: 22px;
+  }
+
+  .advantages__item:last-child .advantages__item-image {
+    margin-bottom: 11px;
+  }
+
+  .advantages__item-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .advantages__item-text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .service {
+    padding-inline: 20px;
+  }
+
+  .service__body {
+    gap: 30px;
+    margin: 200px auto 0;
+    min-width: 920px;
+  }
+
+  .service__left {
+    max-width: 420px;
+  }
+
+  .service__image {
+    width: 380px;
+    height: 580px;
+  }
+
+  .service__background {
+    width: 344px;
+    height: 580px;
+    top: 39px;
+  }
+
+  .service__right {
+    max-width: 398px;
+    margin-top: 49px;
+  }
+
+  .service__cap {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .service__title {
+    font-size: 46px;
+    line-height: 60px;
+    right: 97px;
+    margin-bottom: 41px;
+  }
+
+  .service__text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .product__body {
+    margin-top: 230px;
+  }
+
+  .product__list {
+    grid-template-rows: auto repeat(2, 280px);
+    gap: 40px;
+  }
+
+  .product__title {
+    font-size: 48px;
+    line-height: 70px;
+  }
+
+  .product__item-bedsheets {
+    width: 280px;
+    height: 587px;
+    margin-top: 72px;
+  }
+
+  .product__item-bedspreads {
+    margin-top: -107px;
+    width: 281px;
+    height: 287px;
+  }
+
+  .product__item-bathroom {
+    margin-top: -99px;
+  }
+
+  .product__item-link {
+    font-size: 24px;
+  }
+
+  .product__item-beauty,
+  .product__item-pillowcase,
+  .product__item-bathroom {
+    width: 280px;
+  }
+
+  .subscribe__background {
+    padding: 70px 0 95px;
+    margin-top: 200px;
+  }
+
+  .subscribe__title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .subscribe__text {
+    max-width: 318px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .subscribe input,
+  .subscribe__button {
+    height: 50px;
+  }
+
+  .subscribe input {
+    width: 360px;
+    padding-left: 19px;
+  }
+
+  .subscribe input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 26;
+  }
+
+  .subscribe input::placeholder {
+    font-size: 14px;
+    line-height: 26;
+  }
+
+  .subscribe__name {
+    margin-bottom: 20px;
+  }
+
+  .subscribe__email {
+    margin-bottom: 30px;
+  }
+
+  .subscribe__button {
+    width: 360px;
+    font-size: 14px;
+    line-height: 30px;
+    padding-inline: 115px;
+  }
+
+  .footer__body {
+    padding-block: 51px 40px;
+  }
+
+  .footer__columns {
+    grid-template-columns: repeat(4, 207px);
+    grid-template-rows: 40px 1fr;
+    margin-bottom: 73px;
+  }
+
+  .footer__logo {
+    width: 145px;
+    height: 40px;
+  }
+
+  .footer__contacts {
+    margin-top: 69.6px;
+  }
+
+  .footer__catalog,
+  .footer__about,
+  .footer__more {
+    margin-top: 8px;
+  }
+
+  .footer__title {
+    font-size: 16px;
+    margin-bottom: 18.24px;
+  }
+
+  .footer__phone {
+    font-size: 24px;
+    margin-bottom: 14.41px;
+  }
+
+  .footer__timing {
+    font-size: 16px;
+  }
+
+  .footer__link {
+    font-size: 16px;
+  }
+
+  .footer__list {
+    gap: 15px;
+  }
+
+  .footer__copyright {
+    font-size: 16px;
   }
 }
 
@@ -1837,6 +2197,7 @@ main {
   }
 
   .client__body {
+    max-width: 768px;
     grid-template-columns: 310px 334px;
     padding-inline: 20px;
     box-sizing: content-box;
@@ -1949,7 +2310,7 @@ main {
   }
 
   .new__body {
-    padding-inline: 30px;
+    padding-inline: 20px;
   }
 
   .new__body::after {
@@ -1975,9 +2336,11 @@ main {
   }
 
   .material__body {
+    margin: 0 auto;
+    max-width: 768px;
     padding-inline: 20px;
-    -moz-column-gap: 44px;
-    column-gap: 44px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
   }
 
   .material__body::after {
@@ -2008,6 +2371,294 @@ main {
     width: 334px;
     height: 585px;
     margin-top: -80px;
+  }
+
+  .giza__body {
+    max-width: 768px;
+    margin: 180px auto 0;
+    grid-template-columns: 1fr 334px;
+    padding-inline: 20px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    grid-template-areas: "title title" "img text" "img items";
+  }
+
+  .giza__title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 40px;
+  }
+
+  .giza__image {
+    width: 310px;
+    height: 523px;
+  }
+
+  .giza__background {
+    top: 26px;
+    left: 20px;
+    width: 312px;
+    height: 518px;
+  }
+
+  .giza__text {
+    margin-top: 0;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .giza__list {
+    margin-top: 30px;
+    gap: 30px 20px;
+  }
+
+  .giza__item {
+    max-width: 157px;
+  }
+
+  .giza__item-number {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 5px;
+  }
+
+  .giza__item-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .giza__item-text {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 170px;
+  }
+
+  .quote__body {
+    margin-top: 150px;
+  }
+
+  .quote__body::before {
+    transform: translateX(-50%) scale(0.7);
+    top: -76px;
+  }
+
+  .quote__body::after {
+    transform: translateX(-50%) scale(0.7);
+  }
+
+  .quote__content {
+    padding-inline: 30px;
+  }
+
+  .quote__bg {
+    height: 470px;
+  }
+
+  .quote__text {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .quote__author {
+    font-size: 16px;
+  }
+
+  .quote__footer:last-child {
+    font-size: 10px;
+  }
+
+  .quote__arrow-left,
+  .quote__arrow-right {
+    display: none;
+  }
+
+  .advantages__body {
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 768px;
+    margin: 125px auto 0;
+    padding-inline: 20px;
+  }
+
+  .advantages__body::after {
+    left: -112px;
+    top: -210px;
+    transform: scale(0.7);
+  }
+
+  .advantages__title {
+    font-size: 40px;
+    line-height: 35px;
+    margin-bottom: 40px;
+    max-width: unset;
+  }
+
+  .advantages__list {
+    justify-content: unset;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 40px;
+  }
+
+  .advantages__item {
+    max-width: 209px;
+  }
+
+  .service__body {
+    gap: 63px;
+    margin-top: 150px;
+    min-width: unset;
+    max-width: 708px;
+  }
+
+  .service__body::after {
+    transform: scale(0.8);
+  }
+
+  .service__left,
+  .service__right {
+    width: unset;
+    min-width: unset;
+  }
+
+  .service__left {
+    min-width: 310px;
+    max-width: 310px;
+  }
+
+  .service__image {
+    width: 310px;
+    height: 523px;
+  }
+
+  .service__background {
+    width: 312px;
+    height: 518px;
+    top: 30px;
+    left: 25px;
+  }
+
+  .service__right {
+    margin-top: 32px;
+    max-width: 334px;
+    min-width: 334px;
+  }
+
+  .service__title {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 30px;
+    width: 420px;
+  }
+
+  .product__body {
+    margin-top: 150px;
+  }
+
+  .product__body::after {
+    transform: scale(0.8);
+  }
+
+  .product__list {
+    margin: 0 auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    grid-template-rows: auto repeat(2, 210px);
+  }
+
+  .product__title {
+    font-size: 40px;
+  }
+
+  .product__item-bedsheets {
+    margin-top: 32px;
+    width: 213px;
+    height: 447px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+
+  .product__item-bedspreads {
+    padding-bottom: 18px;
+    padding-left: 15px;
+    margin-top: -94px;
+    width: 209px;
+    height: 213px;
+  }
+
+  .product__item-link {
+    font-size: 20px;
+  }
+
+  .product__item-beauty,
+  .product__item-pillowcase,
+  .product__item-bathroom {
+    width: 210px;
+    padding-left: 13px;
+    padding-bottom: 15px;
+  }
+
+  .subscribe__background {
+    padding: 71px 0 90px;
+    margin-top: 150px;
+  }
+
+  .subscribe__title {
+    font-size: 40px;
+    line-height: 30px;
+  }
+
+  .subscribe__text {
+    margin-bottom: 39px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .subscribe input,
+  .subscribe__button {
+    max-width: 314px;
+    width: 100%;
+  }
+
+  .subscribe__button {
+    padding-inline: 90px;
+  }
+
+  .footer__body {
+    padding-block: 39px 52px;
+  }
+
+  .footer__columns {
+    grid-template-columns: repeat(3, 207px);
+    grid-template-rows: auto auto;
+    grid-template-areas: "catalog about more" "logo contacts .";
+    gap: 18px 42px;
+    padding-inline: 30px;
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  .footer__logo {
+    align-self: center;
+  }
+
+  .footer__contacts {
+    margin-top: 0;
+  }
+
+  .footer__title {
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer__phone {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .footer__copyright {
+    display: none;
   }
 }
 
@@ -2051,7 +2702,7 @@ main {
   }
 
   .client__body {
-    grid-template-columns: 155px 1fr;
+    grid-template-columns: 144px 1fr;
     grid-template-areas: "img text1" "text2 text2";
     margin-bottom: 111px;
     -moz-column-gap: 0;
@@ -2087,7 +2738,11 @@ main {
   .client__image {
     width: 171px;
     height: 330px;
-    left: -62px;
+    left: -56px;
+  }
+
+  .client__image-wrapper {
+    position: absolute;
   }
 
   .client__background {
@@ -2225,5 +2880,244 @@ main {
   .material__image {
     width: 114px;
     height: 200px;
+  }
+
+  .giza__body {
+    -moz-column-gap: 0;
+    column-gap: 0;
+    position: relative;
+    z-index: 200;
+    margin: 35px auto 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img img" "title title" "text text" "items items";
+  }
+
+  .giza__title {
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+
+  .giza__image-block {
+    margin-bottom: 25px;
+  }
+
+  .giza__image {
+    width: 315px;
+    height: 320px;
+  }
+
+  .giza__background {
+    display: none;
+  }
+
+  .giza__text {
+    color: rgba(51, 51, 51, 0.8);
+    font-size: 14px;
+  }
+
+  .giza__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px 20px;
+    margin-top: 40px;
+  }
+
+  .giza__item {
+    max-width: unset;
+  }
+
+  .giza__item-number {
+    margin-bottom: 10px;
+  }
+
+  .giza__item-text {
+    font-size: 12px;
+    max-width: unset;
+  }
+
+  .quote__body {
+    margin-top: 90px;
+  }
+
+  .quote__text {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .advantages__body {
+    margin-top: 140px;
+  }
+
+  .advantages__cap {
+    font-size: 14px;
+  }
+
+  .advantages__title {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+
+  .advantages__list {
+    flex-direction: column;
+  }
+
+  .advantages__item {
+    max-width: unset;
+  }
+
+  .advantages__item:first-child {
+    margin-top: unset;
+  }
+
+  .advantages__item:last-child {
+    margin-top: 55px;
+  }
+
+  .advantages__item:first-child .advantages__item-image {
+    margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .advantages__item:nth-child(2) .advantages__item-image {
+    margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .advantages__item:last-child .advantages__item-image {
+    margin-bottom: 20px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .advantages__item-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .service__body {
+    gap: 18px;
+    margin-top: 184px;
+  }
+
+  .service__left {
+    min-width: 155px;
+    left: 0px;
+  }
+
+  .service__image {
+    width: 155px;
+    height: 330px;
+    left: -53px;
+  }
+
+  .service__background {
+    width: 131px;
+    height: 330px;
+    top: 20px;
+    left: -11px;
+  }
+
+  .service__right {
+    margin-top: 30px;
+    max-width: unset;
+    min-width: unset;
+  }
+
+  .service__cap {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .service__title {
+    max-width: 248px;
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 10px;
+  }
+
+  .service__text {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .product__body {
+    margin-top: 145px;
+  }
+
+  .product__list {
+    padding-inline: 20px;
+    width: unset;
+    grid-template-rows: auto;
+    align-items: end;
+    grid-template-areas: "title bedsheets" "pillowcase bedsheets" "bedspreads bedspreads" "beauty bathroom";
+    gap: 20px;
+  }
+
+  .product__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .product__item-bedsheets {
+    margin-top: 0;
+    width: 100%;
+    height: 280px;
+    padding: 10px;
+  }
+
+  .product__item-bedspreads {
+    margin-top: 0;
+    padding-bottom: 12px;
+    padding-left: 11px;
+    width: 100%;
+    height: 147px;
+  }
+
+  .product__item-bathroom {
+    margin-top: 0;
+  }
+
+  .product__item-link {
+    font-size: 18px;
+  }
+
+  .product__item-beauty,
+  .product__item-pillowcase,
+  .product__item-bathroom {
+    aspect-ratio: unset;
+    height: 146px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .subscribe__background {
+    margin-top: 70px;
+    padding: 71px 0 81px;
+  }
+
+  .subscribe__title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .subscribe__text {
+    font-size: 14px;
+  }
+
+  .footer__body {
+    padding-block: 39px 20px;
+  }
+
+  .footer__columns {
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 60px auto;
+    grid-template-areas: "catalog" "about" "more" "logo" "contacts";
   }
 }
